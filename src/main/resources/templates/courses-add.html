@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Добавление курса</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link type="text/css" rel="stylesheet" href="../static/css/header_style.css" th:href="@{/css/header_style.css}"/>
+  <link type="text/css" rel="stylesheet" href="../static/css/footer_style.css" th:href="@{/css/footer_style.css}"/>
+  <link type="text/css" rel="stylesheet" href="../static/css/course_style.css" th:href="@{/css/course_style.css}"/>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<div class="course-info">
+  <h2>Добавление курса</h2>
+  <form action="/courses/add" method="post">
+    <input type="text" name="name" placeholder="Введите название курса" required>
+    <input type="text" name="language" placeholder="Введите язык изучения" required>
+    <input type="text" name="level" placeholder="Введите начальный уровень" required>
+    <input type="number" name="quantity_of_students" placeholder="Введите количество человек в группе" required>
+    <input type="number" name="age_of_group" placeholder="Введите минимальный рекомендованный возраст" required>
+    <input type="number" step="0.01" name="price" placeholder="Введите цену курса" required>
+    <textarea name="description" placeholder="Введите описание курса" required></textarea>
+    <button type="submit">Добавить курс</button>
+  </form>
+</div>
+
+<footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>

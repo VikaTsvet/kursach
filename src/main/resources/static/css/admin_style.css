@@ -1,0 +1,111 @@
+body {
+    background: #d7d7fa;
+}
+
+.admin {
+    padding: 10px;
+    background-color: #424182;
+    border-radius: 5px;
+    width: 1010px;
+    margin: 50px 16% 50px 16%;
+}
+
+.admin-add-edit {
+    padding: 10px;
+    background-color: #424182;
+    border-radius: 5px;
+    width: 500px;
+    margin: 50px 33% 50px 33%;
+}
+
+.admin h2 {
+    color: #fff;
+    margin-left: 370px;
+}
+
+.admin-add-edit h2 {
+    color: #fff;
+    margin-left: 170px;
+}
+
+.td button, .td a {
+    background-color: #27263D;
+    color: #d7d7fa;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 3px;
+    border: none;
+}
+
+.admin a {
+    background-color: #27263D;
+    color: #d7d7fa;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 3px;
+    border: none;
+    margin: 10px;
+}
+
+table {
+    color: #fff;
+    margin: 10px 0 10px 10px;
+}
+
+th {
+    padding-right: 15px;
+}
+
+.td td, .td th {
+    border: 2px solid #424182;
+    background-color: #424182;
+}
+
+.admin-add-edit input {
+    background: #d7d7fa;
+    color: #27263D;
+    border: none;
+    border-radius: 4px;
+    padding: 7px;
+    margin: 7px;
+    width: 95%;
+}
+
+.admin-add-edit button {
+    background-color: #27263D;
+    color: #d7d7fa;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 3px;
+    border: none;
+    margin: 10px 0 0 10px;
+}
+
+dialog {
+    text-align: center;
+    margin: 10px 0 0 86%;
+    background: #ffffff;
+    color: #27263D;
+    opacity: 0.7;
+    border: none;
+    border-radius: 4px;
+}
+
+dialog button {
+    text-align: right;
+    background-color: #27263D;
+    color: #d7d7fa;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 3px;
+    border: none;
+}

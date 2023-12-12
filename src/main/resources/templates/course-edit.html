@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="'Редактировае курса'"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/header_style.css" th:href="@{/css/header_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/footer_style.css" th:href="@{/css/footer_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/course_style.css" th:href="@{/css/course_style.css}"/>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<div class="course-info">
+    <h2>Редактирование курса</h2>
+    <div th:each="el : ${course}">
+        <form method="post">
+            <input type="text" name="name" th:value="${el.name}" placeholder="Введите название курса" required>
+            <input type="text" name="language" th:value="${el.language}" placeholder="Введите язык изучения" required>
+            <input type="text" name="level" th:value="${el.level}" placeholder="Введите начальный уровень" required>
+            <input type="number" name="quantity_of_students" th:value="${el.quantity_of_students}" placeholder="Введите количество человек в группе" required>
+            <input type="number" name="age_of_group" th:value="${el.age_of_group}" placeholder="Введите минимальный рекомендованный возраст" required>
+            <input type="number" step="0.01" name="price" th:value="${el.price}" placeholder="Введите цену курса" required>
+            <textarea name="description" th:text="${el.description}" placeholder="Введите описание курса" required/>
+            <button type="submit">Обновить</button>
+        </form>
+    </div>
+</div>
+
+<footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>

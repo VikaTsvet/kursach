@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="'Подробнее'"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/header_style.css" th:href="@{/css/header_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/footer_style.css" th:href="@{/css/footer_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/course_style.css" th:href="@{/css/course_style.css}"/>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<div class="course-info">
+    <div th:each="el : ${course}">
+        <p><b>Название курса: </b><span th:text="${el.name}"></span></p>
+        <p><b>Язык изучения: </b><span th:text="${el.language}"></span></p>
+        <p><b>Уровень курса: </b><span th:text="${el.level}"></span></p>
+        <p><b>Количество студентов в группе: </b><span th:text="${el.quantity_of_students}"></span></p>
+        <p><b>Ориентировачный возраст: </b><span th:text="${el.age_of_group}"></span> лет</p>
+        <p><b>Цена: </b><span th:text="${el.price}"></span>р.</p>
+        <b>Описание: </b><textarea th:text="${el.description}" disabled></textarea>
+        <form th:action="'/courses/' + ${el.id} + '/buy'" method="post">
+            <button type="submit">Купить курс</button>
+        </form>
+        <div th:if="${user.getRoleName() == 'TEACHER'}">
+            <a th:href="'/courses/' + ${el.id} + '/edit'">Редактировать</a>
+            <form th:action="'/courses/' + ${el.id} + '/delete'" method="post">
+                <button th:href="'/courses/' + ${el.id} + '/delete'" type="submit">Удалить</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>

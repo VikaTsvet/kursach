@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Мероприятия</title>
+    <link type="text/css" rel="stylesheet" href="../static/css/header_style.css" th:href="@{/css/header_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/footer_style.css" th:href="@{/css/footer_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/course_style.css" th:href="@{/css/course_style.css}"/>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<div>
+    <form method="post" class="search_sort">
+        <div class="search_child">
+            <select name="searchBy">
+                <option>По названию</option>
+                <option>По языку</option>
+            </select>
+            <input type="text" name="value" placeholder="Введите значение поиска">
+        </div>
+        <div class="sort_child">
+            <select name="sortBy">
+                <option>По названию</option>
+                <option>По дате</option>
+            </select>
+            <button type="submit">Сортировать</button>
+        </div>
+    </form>
+</div>
+
+<h1>Мероприятия</h1>
+<div class="container-course">
+    <div th:each="el : ${events}" class="course">
+        <p><b>Название мероприятия: </b><span th:text="${el.name}"></span></p>
+        <p><b>Дата проведения: </b><span th:text="${#temporals.format(el.date, 'dd.MM.yyyy')}"></span></p>
+        <p><b>Язык: </b><span th:text="${el.language}"></span></p>
+        <a th:href="'/events/' + ${el.id}">Подробнее</a>
+    </div>
+</div>
+<div th:if="${user.getRoleName() == 'TEACHER'}">
+    <a th:href="'/events/add'" class="add_course">Добавить мероприятие</a>
+</div>
+
+<footer th:insert="blocks/footer :: footer"></footer>
+
+</body>
+</html>

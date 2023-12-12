@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Переводчик</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/header_style.css" th:href="@{/css/header_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/footer_style.css" th:href="@{/css/footer_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/translator_style.css" th:href="@{/css/translator_style.css}"/>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<div class="translator">
+    <form method="post" class="translator-grid">
+        <div class="translator-nav">
+            <select name="from">
+                <option th:value="en">Английский</option>
+                <option th:value="fr">Французский</option>
+                <option th:value="de">Немецкий</option>
+                <option th:value="es">Испанский</option>
+                <option th:value="zh">Китайский</option>
+                <option th:value="ja">Японский</option>
+                <option th:value="pl">Польский</option>
+                <option th:value="ru">Русский</option>
+            </select>
+            <button type="submit">Перевести</button>
+            <select name="to">
+                <option th:value="ru">Русский</option>
+                <option th:value="en">Английский</option>
+                <option th:value="fr">Французский</option>
+                <option th:value="de">Немецкий</option>
+                <option th:value="es">Испанский</option>
+                <option th:value="zh">Китайский</option>
+                <option th:value="ja">Японский</option>
+                <option th:value="pl">Польский</option>
+            </select>
+        </div>
+        <div class="translator-textarea">
+            <textarea name="text" placeholder="Введите текст для перевода"></textarea>
+            <textarea name="result" placeholder="Перевод" th:text="${result}" disabled/>
+        </div>
+    </form>
+</div>
+
+<footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>

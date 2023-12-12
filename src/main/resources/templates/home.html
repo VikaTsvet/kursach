@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/header_style.css" th:href="@{/css/header_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/footer_style.css" th:href="@{/css/footer_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/home_style.css" th:href="@{/css/home_style.css}"/>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<div class="content">
+    <h2>Современная школа иностранных языков YourWay</h2>
+    <div class="content-child">
+        <h3>Опыт</h3>
+        <div class="child1">
+            <div class="child1-item">
+                <p>Опыт преподавания языков с 2000 года</p>
+            </div>
+            <div class="child1-item">
+                <p>Филиалы во всех областях Беларуси</p>
+            </div>
+            <div class="child1-item">
+                <p>5000+ студентов ежегодно</p>
+            </div>
+            <div class="child1-item">
+                <p>Десятки обучающихся компаний</p>
+            </div>
+        </div>
+    </div>
+    <div class="content-child">
+        <h3>Наши достижения</h3>
+        <div class="child2">
+            <div class="child1-item">
+                <p>Престижная международная аккредитация Quality English Associate School за качество преподавания и сервиса</p>
+            </div>
+            <div class="child1-item">
+                <p>Членство в ассоциациях международного образования: ICEF, English UK, Business English UK, EAQA</p>
+            </div>
+            <div class="child1-item">
+                <p>Победа в Первой премии HR-бренд Беларусь, 2014, 2023</p>
+            </div>
+            <div class="child1-item">
+                <p>Премия «Номер один» в двух номинациях:
+                    Школа английского языка №1, VIP-курсы английского №1</p>
+            </div>
+        </div>
+    </div>
+    <div class="content-child">
+        <h3>Качество</h3>
+        <div class="child2">
+            <div class="child1-item">
+                <p>Обучение языкам по современным мировым стандартам: системное, практически ориентированное, с измеряемым результатом.</p>
+            </div>
+            <div class="child1-item">
+                <p>множество учебных программ + эффективные инструменты для языковой практики.
+                    Найдём самый быстрый путь к вашей цели!</p>
+            </div>
+            <div class="child1-item">
+                <p>Собственный академический центр. Развитие преподавателей, внедрение стандартов, обновление методик, создание образовательных продуктов, пособий, проектов.</p>
+            </div>
+            <div class="child1-item">
+                <p>Высококлассные преподаватели. Искренне любят профессию! Постоянно учатся, чтобы стать ещё лучше, получают международные квалификации, стажируются за рубежом.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>

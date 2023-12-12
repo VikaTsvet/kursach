@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Добавление учебных материалов</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/header_style.css" th:href="@{/css/header_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/footer_style.css" th:href="@{/css/footer_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/course_style.css" th:href="@{/css/course_style.css}"/>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<div class="course-info">
+    <h2>Добавление учебного материала</h2>
+    <form method="post">
+        <input type="text" name="name" placeholder="Введите название" required>
+        <input type="text" name="author" placeholder="Введите автора" required>
+        <input type="text" name="language" placeholder="Введите язык" required>
+        <input type="text" name="level" placeholder="Введите уровень" required>
+        <textarea name="description" placeholder="Введите описание" required></textarea>
+        <button type="submit">Добавить</button>
+    </form>
+</div>
+
+<footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Тест</title>
+    <script type="text/javascript" src="../static/js/data.js"></script>
+    <link type="text/css" rel="stylesheet" href="../static/css/header_style.css" th:href="@{/css/header_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/footer_style.css" th:href="@{/css/footer_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/test_style.css" th:href="@{/css/test_style.css}"/>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+<div class="test">
+    <p>Тема - "<span id="title"></span>".</p>
+    <div id="question1" style="display:block;">
+        <p>Вопрос 1</p>
+        <p><span id="q_1"></span><br><br>
+            1. <span id="option1_1"></span><br>
+            2. <span id="option1_2"></span><br>
+            3. <span id="option1_3"></span><br>
+            4. <span id="option1_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_1" required>
+        </p>
+    </div>
+    <div id="question2" style="display:none;">
+        <p>Вопрос 2</p>
+        <p><span id="q_2"></span><br><br>
+            1. <span id="option2_1"></span><br>
+            2. <span id="option2_2"></span><br>
+            3. <span id="option2_3"></span><br>
+            4. <span id="option2_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_2" required>
+        </p>
+    </div>
+    <div id="question3" style="display:none;">
+        <p>Вопрос 3</p>
+        <p><span id="q_3"></span><br><br>
+            1. <span id="option3_1"></span><br>
+            2. <span id="option3_2"></span><br>
+            3. <span id="option3_3"></span><br>
+            4. <span id="option3_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_3" required>
+        </p>
+    </div>
+    <div id="question4" style="display:none;">
+        <p>Вопрос 4</p>
+        <p><span id="q_4"></span><br><br>
+            1. <span id="option4_1"></span><br>
+            2. <span id="option4_2"></span><br>
+            3. <span id="option4_3"></span><br>
+            4. <span id="option4_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_4"required>
+        </p>
+    </div>
+    <div id="question5" style="display:none;">
+        <p>Вопрос 5</p>
+        <p><span id="q_5"></span><br><br>
+            1. <span id="option5_1"></span><br>
+            2. <span id="option5_2"></span><br>
+            3. <span id="option5_3"></span><br>
+            4. <span id="option5_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_5" required>
+        </p>
+    </div>
+    <div id="question6" style="display:none;">
+        <p>Вопрос 6</p>
+        <p><span id="q_6"></span><br><br>
+            1. <span id="option6_1"></span><br>
+            2. <span id="option6_2"></span><br>
+            3. <span id="option6_3"></span><br>
+            4. <span id="option6_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_6" required>
+        </p>
+    </div>
+    <div id="question7" style="display:none;">
+        <p>Вопрос 7</p>
+        <p><span id="q_7"></span><br><br>
+            1. <span id="option7_1"></span><br>
+            2. <span id="option7_2"></span><br>
+            3. <span id="option7_3"></span><br>
+            4. <span id="option7_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_7" required>
+        </p>
+    </div>
+    <div id="question8" style="display:none;">
+        <p>Вопрос 8</p>
+        <p><span id="q_8"></span><br><br>
+            1. <span id="option8_1"></span><br>
+            2. <span id="option8_2"></span><br>
+            3. <span id="option8_3"></span><br>
+            4. <span id="option8_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_8" required>
+        </p>
+    </div>
+    <div id="question9" style="display:none;">
+        <p>Вопрос 9</p>
+        <p><span id="q_9"></span><br><br>
+            1. <span id="option9_1"></span><br>
+            2. <span id="option9_2"></span><br>
+            3. <span id="option9_3"></span><br>
+            4. <span id="option9_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_9" required>
+        </p>
+    </div>
+    <div id="question10" style="display:none;">
+        <p>Вопрос 10</p>
+        <p><span id="q_10"></span><br><br>
+            1. <span id="option10_1"></span><br>
+            2. <span id="option10_2"></span><br>
+            3. <span id="option10_3"></span><br>
+            4. <span id="option10_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_10" required>
+        </p>
+    </div>
+    <div id="question11" style="display:none;">
+        <p>Вопрос 11</p>
+        <p><span id="q_11"></span><br><br>
+            1. <span id="option11_1"></span><br>
+            2. <span id="option11_2"></span><br>
+            3. <span id="option11_3"></span><br>
+            4. <span id="option11_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_11" required>
+        </p>
+    </div>
+    <div id="question12" style="display:none;">
+        <p>Вопрос 12</p>
+        <p><span id="q_12"></span><br><br>
+            1. <span id="option12_1"></span><br>
+            2. <span id="option12_2"></span><br>
+            3. <span id="option12_3"></span><br>
+            4. <span id="option12_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_12" required>
+        </p>
+    </div>
+    <div id="question13" style="display:none;">
+        <p>Вопрос 13</p>
+        <p><span id="q_13"></span><br><br>
+            1. <span id="option13_1"></span><br>
+            2. <span id="option13_2"></span><br>
+            3. <span id="option13_3"></span><br>
+            4. <span id="option13_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_13" required>
+        </p>
+    </div>
+    <div id="question14" style="display:none;">
+        <p>Вопрос 14</p>
+        <p><span id="q_14"></span><br><br>
+            1. <span id="option14_1"></span><br>
+            2. <span id="option14_2"></span><br>
+            3. <span id="option14_3"></span><br>
+            4. <span id="option14_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_14" required>
+        </p>
+    </div>
+    <div id="question15" style="display:none;">
+        <p>Вопрос 15</p>
+        <p><span id="q_15"></span><br><br>
+            1. <span id="option15_1"></span><br>
+            2. <span id="option15_2"></span><br>
+            3. <span id="option15_3"></span><br>
+            4. <span id="option15_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_15" required>
+        </p>
+    </div>
+    <div id="question16" style="display:none;">
+        <p>Вопрос 16</p>
+        <p><span id="q_16"></span><br><br>
+            1. <span id="option16_1"></span><br>
+            2. <span id="option16_2"></span><br>
+            3. <span id="option16_3"></span><br>
+            4. <span id="option16_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_16" required>
+        </p>
+    </div>
+    <div id="question17" style="display:none;">
+        <p>Вопрос 17</p>
+        <p><span id="q_17"></span><br><br>
+            1. <span id="option17_1"></span><br>
+            2. <span id="option17_2"></span><br>
+            3. <span id="option17_3"></span><br>
+            4. <span id="option17_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_17" required>
+        </p>
+    </div>
+    <div id="question18" style="display:none;">
+        <p>Вопрос 18</p>
+        <p><span id="q_18"></span><br><br>
+            1. <span id="option18_1"></span><br>
+            2. <span id="option18_2"></span><br>
+            3. <span id="option18_3"></span><br>
+            4. <span id="option18_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_18" required>
+        </p>
+    </div>
+    <div id="question19" style="display:none;">
+        <p>Вопрос 19</p>
+        <p><span id="q_19"></span><br><br>
+            1. <span id="option19_1"></span><br>
+            2. <span id="option19_2"></span><br>
+            3. <span id="option19_3"></span><br>
+            4. <span id="option19_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_19" required>
+        </p>
+    </div>
+    <div id="question20" style="display:none;">
+        <p>Вопрос 20</p>
+        <p><span id="q_20"></span><br><br>
+            1. <span id="option20_1"></span><br>
+            2. <span id="option20_2"></span><br>
+            3. <span id="option20_3"></span><br>
+            4. <span id="option20_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_20" required>
+        </p>
+    </div>
+    <div id="question21" style="display:none;">
+        <p>Вопрос 21</p>
+        <p><span id="q_21"></span><br><br>
+            1. <span id="option21_1"></span><br>
+            2. <span id="option21_2"></span><br>
+            3. <span id="option21_3"></span><br>
+            4. <span id="option21_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_21" required>
+        </p>
+    </div>
+    <div id="question22" style="display:none;">
+        <p>Вопрос 22</p>
+        <p><span id="q_22"></span><br><br>
+            1. <span id="option22_1"></span><br>
+            2. <span id="option22_2"></span><br>
+            3. <span id="option22_3"></span><br>
+            4. <span id="option22_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_22" required>
+        </p>
+    </div>
+    <div id="question23" style="display:none;">
+        <p>Вопрос 23</p>
+        <p><span id="q_23"></span><br><br>
+            1. <span id="option23_1"></span><br>
+            2. <span id="option23_2"></span><br>
+            3. <span id="option23_3"></span><br>
+            4. <span id="option23_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_23" required>
+        </p>
+    </div>
+    <div id="question24" style="display:none;">
+        <p>Вопрос 24</p>
+        <p><span id="q_24"></span><br><br>
+            1. <span id="option24_1"></span><br>
+            2. <span id="option24_2"></span><br>
+            3. <span id="option24_3"></span><br>
+            4. <span id="option24_4"></span><br><br>
+            <input type="number"min="1" max="4" id="input_24" required>
+        </p>
+    </div>
+    <div id="question25" style="display:none;">
+        <p>Вопрос 25</p>
+        <p><span id="q_25"></span><br><br>
+            1. <span id="option25_1"></span><br>
+            2. <span id="option25_2"></span><br>
+            3. <span id="option25_3"></span><br>
+            4. <span id="option25_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_25" required>
+        </p>
+    </div>
+    <div id="question26" style="display:none;">
+        <p>Вопрос 26</p>
+        <p><span id="q_26"></span><br><br>
+            1. <span id="option26_1"></span><br>
+            2. <span id="option26_2"></span><br>
+            3. <span id="option26_3"></span><br>
+            4. <span id="option26_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_26" required>
+        </p>
+    </div>
+    <div id="question27" style="display:none;">
+        <p>Вопрос 27</p>
+        <p><span id="q_27"></span><br><br>
+            1. <span id="option27_1"></span><br>
+            2. <span id="option27_2"></span><br>
+            3. <span id="option27_3"></span><br>
+            4. <span id="option27_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_27" required>
+        </p>
+    </div>
+    <div id="question28" style="display:none;">
+        <p>Вопрос 28</p>
+        <p><span id="q_28"></span><br><br>
+            1. <span id="option28_1"></span><br>
+            2. <span id="option28_2"></span><br>
+            3. <span id="option28_3"></span><br>
+            4. <span id="option28_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_28" required>
+        </p>
+    </div>
+    <div id="question29" style="display:none;">
+        <p>Вопрос 29</p>
+        <p><span id="q_29"></span><br><br>
+            1. <span id="option29_1"></span><br>
+            2. <span id="option29_2"></span><br>
+            3. <span id="option29_3"></span><br>
+            4. <span id="option29_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_29" required>
+        </p>
+    </div>
+    <div id="question30" style="display:none;">
+        <p>Вопрос 30</p>
+        <p><span id="q_30"></span><br><br>
+            1. <span id="option30_1"></span><br>
+            2. <span id="option30_2"></span><br>
+            3. <span id="option30_3"></span><br>
+            4. <span id="option30_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_30" required>
+        </p>
+    </div>
+    <div id="question31" style="display:none;">
+        <p>Вопрос 31</p>
+        <p><span id="q_31"></span><br><br>
+            1. <span id="option31_1"></span><br>
+            2. <span id="option31_2"></span><br>
+            3. <span id="option31_3"></span><br>
+            4. <span id="option31_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_31" required>
+        </p>
+    </div>
+    <div id="question32" style="display:none;">
+        <p>Вопрос 32</p>
+        <p><span id="q_32"></span><br><br>
+            1. <span id="option32_1"></span><br>
+            2. <span id="option32_2"></span><br>
+            3. <span id="option32_3"></span><br>
+            4. <span id="option32_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_32" required>
+        </p>
+    </div>
+    <div id="question33" style="display:none;">
+        <p>Вопрос 33</p>
+        <p><span id="q_33"></span><br><br>
+            1. <span id="option33_1"></span><br>
+            2. <span id="option33_2"></span><br>
+            3. <span id="option33_3"></span><br>
+            4. <span id="option33_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_33" required>
+        </p>
+    </div>
+    <div id="question34" style="display:none;">
+        <p>Вопрос 34</p>
+        <p><span id="q_34"></span><br><br>
+            1. <span id="option34_1"></span><br>
+            2. <span id="option34_2"></span><br>
+            3. <span id="option34_3"></span><br>
+            4. <span id="option34_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_34" required>
+        </p>
+    </div>
+    <div id="question35" style="display:none;">
+        <p>Вопрос 35</p>
+        <p><span id="q_35"></span><br><br>
+            1. <span id="option35_1"></span><br>
+            2. <span id="option35_2"></span><br>
+            3. <span id="option35_3"></span><br>
+            4. <span id="option35_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_35" required>
+        </p>
+    </div>
+    <div id="question36" style="display:none;">
+        <p>Вопрос 36</p>
+        <p><span id="q_36"></span><br><br>
+            1. <span id="option36_1"></span><br>
+            2. <span id="option36_2"></span><br>
+            3. <span id="option36_3"></span><br>
+            4. <span id="option36_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_36" required>
+        </p>
+    </div>
+    <div id="question37" style="display:none;">
+        <p>Вопрос 37</p>
+        <p><span id="q_37"></span><br><br>
+            1. <span id="option37_1"></span><br>
+            2. <span id="option37_2"></span><br>
+            3. <span id="option37_3"></span><br>
+            4. <span id="option37_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_37" required>
+        </p>
+    </div>
+    <div id="question38" style="display:none;">
+        <p>Вопрос 38</p>
+        <p><span id="q_38"></span><br><br>
+            1. <span id="option38_1"></span><br>
+            2. <span id="option38_2"></span><br>
+            3. <span id="option38_3"></span><br>
+            4. <span id="option38_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_38" required>
+        </p>
+    </div>
+    <div id="question39" style="display:none;">
+        <p>Вопрос 39</p>
+        <p><span id="q_39"></span><br><br>
+            1. <span id="option39_1"></span><br>
+            2. <span id="option39_2"></span><br>
+            3. <span id="option39_3"></span><br>
+            4. <span id="option39_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_39" required>
+        </p>
+    </div>
+    <div id="question40" style="display:none;">
+        <p>Вопрос 40</p>
+        <p><span id="q_40"></span><br><br>
+            1. <span id="option40_1"></span><br>
+            2. <span id="option40_2"></span><br>
+            3. <span id="option40_3"></span><br>
+            4. <span id="option40_4"></span><br><br>
+            <input type="number" min="1" max="4" id="input_40" required>
+        </p>
+    </div>
+    <button id="button_next" onclick="next_question();">Следующий вопрос</button>
+    <button id="button_result" style="display:none;" onclick="result();">Проверить</button>
+    <div id="result"></div>
+</div>
+<footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>

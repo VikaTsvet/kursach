@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Аккаунт</title>
+    <link type="text/css" rel="stylesheet" href="../static/css/header_style.css" th:href="@{/css/header_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/footer_style.css" th:href="@{/css/footer_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/account_style.css" th:href="@{/css/account_style.css}"/>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+<div class="account">
+    <h1 class="account-title">Редактирование профиля</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="text" th:value="${user.name}" name="name" placeholder="Введите имя" required><br>
+        <input type="text" th:value="${user.surname}" name="surname" placeholder="Введите фамилию" required><br>
+        <input type="number" th:value="${user.age}" name="age" placeholder="Введите возраст" required><br>
+        <input type="text" th:value="${user.login}" name="login" placeholder="Введите логин" required><br>
+        <a href="/account/edit/password">Смена пароля</a><br>
+        <button type="submit">Обновить</button>
+    </form>
+</div>
+
+<footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>

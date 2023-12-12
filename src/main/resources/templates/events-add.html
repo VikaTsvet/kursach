@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Добавление мероприятий</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/header_style.css" th:href="@{/css/header_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/footer_style.css" th:href="@{/css/footer_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/course_style.css" th:href="@{/css/course_style.css}"/>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<div class="course-info">
+    <h2>Добавление мероприятия</h2>
+    <form method="post">
+        <input type="text" name="name" placeholder="Введите название" required>
+        <input type="date" name="date" placeholder="Введите дату" required>
+        <input type="time" name="time" placeholder="Введите время" required>
+        <input type="text" name="place" placeholder="Введите место" required>
+        <input type="text" name="language" placeholder="Введите язык" required>
+        <textarea name="description" placeholder="Введите описание" required></textarea>
+        <button type="submit">Добавить</button>
+    </form>
+</div>
+
+<footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/header_style.css" th:href="@{/css/header_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/footer_style.css" th:href="@{/css/footer_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/course_style.css" th:href="@{/css/course_style.css}"/>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<div>
+    <form method="post"class="search_sort">
+        <div class="search_child">
+            <select name="searchBy">
+                <option>По названию</option>
+                <option>По языку</option>
+                <option>По уровню</option>
+            </select>
+            <input type="text" name="value" placeholder="Введите значение поиска">
+        </div>
+        <div class="sort_child">
+            <select name="sortBy">
+                <option>По названию</option>
+                <option>По цене</option>
+            </select>
+            <button type="submit">Сортировать</button>
+        </div>
+    </form>
+</div>
+
+<h1>Наши курсы</h1>
+<div class="container-course">
+    <div th:each="el : ${courses}" class="course">
+        <p><b>Название курса: </b><span th:text="${el.name}"></span></p>
+        <p><b>Язык изучения: </b><span th:text="${el.language}"></span></p>
+        <p><b>Цена: </b><span th:text="${el.price}"></span> р.</p>
+        <a th:href="'/courses/' + ${el.id}">Подробнее</a>
+    </div>
+</div>
+<div th:if="${user.getRoleName() == 'TEACHER'}">
+    <a th:href="'/courses/add'" class="add_course">Добавить курс</a>
+</div>
+
+<footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>

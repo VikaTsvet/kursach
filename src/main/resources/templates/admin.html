@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Админ</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/header_style.css" th:href="@{/css/header_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/footer_style.css" th:href="@{/css/footer_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/admin_style.css" th:href="@{/css/admin_style.css}"/>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<div th:if="${usernameError}">
+    <dialog open>
+        <p>Невозможно удалить администратора</p>
+        <form method="dialog">
+            <button type="submit">Ок</button>
+        </form>
+    </dialog>
+</div>
+
+<div class="admin">
+    <h2>Список пользователей</h2>
+    <table>
+        <thead class="td">
+        <th>Имя</th>
+        <th>Фамилия</th>
+        <th>Возраст</th>
+        <th>Логин</th>
+        <th>Пароль</th>
+        </thead>
+        <div th:each="el : ${allUsers}">
+            <tr class="td">
+                <td th:text="${el.name}"></td>
+                <td th:text="${el.surname}"></td>
+                <td th:text="${el.age}"></td>
+                <td th:text="${el.login}"></td>
+                <td th:text="${el.password}"></td>
+                <td>
+                    <form method="post">
+                        <button type="submit" name="userId" th:value="${el.id}">Удалить</button>
+                    </form>
+                </td>
+                <td>
+                    <a th:href="'/admin/' + ${el.id} + '/edit'">Редактировать</a>
+                </td>
+            </tr>
+        </div>
+    </table>
+    <a th:href="'/admin/add'">Добавить преподавателя</a>
+</div>
+
+<footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>

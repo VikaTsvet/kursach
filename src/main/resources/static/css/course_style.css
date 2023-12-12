@@ -1,0 +1,151 @@
+body {
+    background: #d7d7fa;
+    width: 100%;
+}
+
+.search_sort {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 7px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.search_child {
+    flex: 1;
+}
+
+.sort_child {
+    flex: 1;
+    align-self: flex-start;
+    padding-left: 50px;
+}
+
+.search_child select, .sort_child select {
+    font-size: 14px;
+    border: none;
+    background: #d7d7fa;
+    color: #27263D;
+}
+
+.search_child input {
+    border: none;
+    border-radius: 3px;
+    background: #d7d7fa;
+    color: #27263D;
+    height: 40px;
+}
+
+button {
+    color: #d7d7fa;
+    background-color: #27263D;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 3px;
+    border: none;
+    margin: 5px 0 5px 0;
+}
+
+.container-course {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+    width: 100%;
+    gap: 50px;
+}
+
+.course {
+    padding: 20px;
+    border-radius: 4px;
+    color: #27263D;
+    background-color: #424182;
+}
+
+.course a, .course-info a {
+    color: #ffffff;
+    background-color: #27263D;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.container-course a {
+    color: #ffffff;
+    background-color: #27263D;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.course a:hover{
+    color: #ffffff;
+}
+
+h1 {
+    color: #27263D;
+    text-align: center;
+    margin: 0;
+}
+
+.add_course {
+    color: #ffffff;
+    background-color: #27263D;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px;
+    margin: 50px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.course-info {
+    padding: 20px;
+    border-radius: 4px;
+    width: 33%;
+    margin: 50px 33% 50px 33%;
+    color: #27263D;
+    background-color: #424182;
+}
+
+textarea {
+    width: 100%;
+    height: 180px;
+    background: #d7d7fa;
+    border: none;
+    border-radius: 4px;
+    font-family: Arial;
+    color: #27263D;
+    resize: none;
+}
+
+.course-info h2 {
+    text-align: center;
+    margin: 5px;
+}
+
+.course-info input {
+    background: #d7d7fa;
+    color: #27263D;
+    border: none;
+    border-radius: 4px;
+    padding: 7px;
+    margin: 7px;
+    width: 95%;
+}

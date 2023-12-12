@@ -1,0 +1,38 @@
+body {
+    background: #d7d7fa;
+}
+
+.test {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    text-align:center;
+}
+
+p, span, input {
+    font-size: 20px;
+}
+
+button {
+    color: #d7d7fa;
+    background-color: #27263D;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: none;
+}
+
+#vo {
+    color: green;
+}
+
+#nvo {
+    color: red;
+}
+
+#ot {
+    color: blue;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Авторизация</title>
+    <link type="text/css" rel="stylesheet" href="../static/css/header_style.css" th:href="@{/css/header_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/footer_style.css" th:href="@{/css/footer_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/login_style.css" th:href="@{/css/login_style.css}"/>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<div th:if="${param.error}">
+    <dialog open>
+        <p>Неверный логин или пароль.</p>
+        <form method="dialog">
+            <button type="submit">Ок</button>
+        </form>
+    </dialog>
+</div>
+<div th:if="${param.logout}">
+    <dialog open>
+        <p>Вы вышли из аккаунта.</p>
+        <form method="dialog">
+            <button type="submit">Ок</button>
+        </form>
+    </dialog>
+</div>
+
+<div class="login">
+    <h2>Вход в систему</h2>
+    <form action="/login" method="post">
+        <div>
+            <input type="text" name="username" placeholder="Введите логин" required/>
+            <input type="password" name="password" placeholder="Введите пароль" required/>
+            <button type="submit">Войти</button>
+        </div>
+    </form>
+    <p>Нет аккаунта? <a href="/registration">Зарегистрироваться</a></p>
+</div>
+
+<footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>
